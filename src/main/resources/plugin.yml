@@ -1,0 +1,7 @@
+name: MultiplePiglets
+version: '${project.version}'
+main: me.lesxmore.multiplepiglets.MultiplePiglets
+api-version: 1.19
+load: STARTUP
+authors: [lesxmore]
+description: When breeding, pigs spawn multiple piglets at once. [Mobs]
