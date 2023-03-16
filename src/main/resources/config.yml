@@ -1,0 +1,3 @@
+# MultiplePiglets ${project.version}
+# Change this value to your desired maximum count of piglets
+pigletsPerLitter: 4
