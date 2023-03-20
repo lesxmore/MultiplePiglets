@@ -1,5 +1,5 @@
 name: MultiplePiglets
-version: 1.1
+version: 1.2
 main: me.lesxmore.multiplepiglets.MultiplePiglets
 api-version: 1.19
 load: STARTUP

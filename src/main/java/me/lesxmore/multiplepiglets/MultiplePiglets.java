@@ -14,7 +14,6 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Objects;
 import java.util.Random;
 
 public final class MultiplePiglets extends JavaPlugin implements Listener {
@@ -66,7 +65,7 @@ public final class MultiplePiglets extends JavaPlugin implements Listener {
             int maxPigletsPerLitter = 0;
             for (int i = 10; i > 0; i--) {
                 String permission = "multiplepiglets.pigletsPerLitter." + i;
-                if (Objects.requireNonNull(event.getBreeder()).hasPermission(permission)) {
+                if (event.getBreeder() != null && event.getBreeder().hasPermission(permission)) {
                     maxPigletsPerLitter = i;
                     break;
                 }
@@ -80,7 +79,7 @@ public final class MultiplePiglets extends JavaPlugin implements Listener {
 
             // Set the number of piglets based on the maximum pigletsPerLitter allowed
             Random rand = new Random();
-            int numPiglets = rand.nextInt(maxPigletsPerLitter - 1) + 2; // 2 to maxPigletsPerLitter piglets
+            int numPiglets = rand.nextInt(maxPigletsPerLitter) + 1;
 
             // Spawn the piglets
             for (int i = 0; i < numPiglets; i++) {
